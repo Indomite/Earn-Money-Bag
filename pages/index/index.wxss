@@ -1,0 +1,98 @@
+.index{
+    background: var(--themeColor);
+}
+
+.index_banner{
+    padding: 150rpx 0rpx 120rpx 40rpx;
+	background-color: #a3a2e9;
+	background-image: url("https://s1.ax1x.com/2020/05/30/tMNGFK.png");
+	background-size: 380rpx;
+	background-repeat: no-repeat;
+	background-position: right 60rpx top;
+}
+.banner_text{
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 5rpx;
+}
+
+.index_main{
+    margin-top: -30rpx;
+    padding: 30rpx 40rpx 0;
+    background: #fff;
+    border-radius: 30rpx 30rpx 0 0;
+    width: 100%;
+}
+
+.index_nav{
+    padding: 0 60rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.index_nav_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.index_nav_item .iconfont{
+    /* color: var(--themeColor); */
+    font-size: 1.5rem;
+}
+
+.icon-location{
+    color: var(--themeColor);
+}
+
+.icon-shijian{
+    color: yellow;
+}
+
+.icon-yaozhaoren{
+    color: red;
+}
+
+.index_title{
+    padding: 50rpx 0 20rpx;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-bottom: 2rpx solid #ccc;
+}
+
+.index_list_container{
+    /* margin-bottom: 0.5rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    height: 200rpx;
+    border-bottom: 5rpx solid #ccc;
+}
+
+.container_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_header>.list_title{
+    font-size: 1.125rem;
+}
+
+.container_header>.list_price{
+    font-size: 1rem;
+    color: var(--themeColor);
+}
+
+.container_content>.list_company{
+    font-size: 0.75rem;
+}
+
+.container_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+}

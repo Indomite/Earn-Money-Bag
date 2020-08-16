@@ -1,0 +1,61 @@
+<view class="job_detail">
+
+    <view class="job_container">
+        <view class="job_info_header">
+            <view class="job_title">发传单</view>
+            <view class="job_price">10/h</view>
+        </view>
+        <view class="job_info_location">
+            <text class="iconfont icon-location"></text>
+            <text class="info_location">江西省南昌市南昌县</text>
+        </view>
+
+        <navigator class="headhunter">
+            <view class="headhunter_headImage"></view>
+            <view class="headhunter_name">姓名</view>
+        </navigator>
+
+        <view class="job_need">
+            <view class="job_info_title">
+                任务详情
+            </view>
+            <view class="job_info_detail">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda maiores, tempora repellat facilis eveniet? Animi totam saepe, nulla facilis quibusdam laborum vitae aperiam quas aliquid dolor earum nobis odio?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda maiores, tempora repellat facilis eveniet? Animi totam saepe, nulla facilis quibusdam laborum vitae aperiam quas aliquid dolor earum nobis odio?
+            </view>
+        </view>
+
+        <view class="job_address">
+            <view class="job_address_title">
+                工作地址
+            </view>
+            <view class="job_address_detail">
+            江西省南昌市南昌县紫阳大道江西师范大学
+            </view>
+        </view>
+
+        <view class="job_apply">
+            <view class="job_apply_title">
+                申请
+            </view>
+            <view class="job_apply_statu">
+                <view class="no_done">待受理</view>
+                <view class="done">已受理</view>
+            </view>
+            <view class="job_apply_user">
+                <view class="user_headImage"></view>
+                <view class="user_name">吴灿</view>
+                <view class="user_headImage"></view>
+                <view class="user_name">吴灿</view>
+                <view class="user_headImage"></view>
+                <view class="user_name">吴灿</view>
+            </view>
+        </view>
+    </view>
+    
+    <view class="job_detail_tool">
+        <navigator class="tool_item item_update" url="">修改任务</navigator>
+        <navigator class="tool_item item_contart" url="../message/index">立即沟通</navigator>
+        <navigator class="tool_item item_apply">完结任务</navigator>
+    </view>
+</view>

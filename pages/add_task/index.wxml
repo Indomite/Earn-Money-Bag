@@ -1,0 +1,81 @@
+<view class="add_task">
+
+    <view class="content" style="display: {{isPop == 'flex' ? 'none' : 'block'}}">
+
+    <view class="task_name_box message_item">
+        <view class="task_name_desc message_desc">
+           任务名称
+        </view>
+        <view class="message_input_box">
+            <input class="task_name" model:value="{{task_name}}"></input>
+        </view>
+    </view>
+
+    <view class="task_city_box message_item">
+        <view class="task_city_desc message_desc"  bindtap="openPop">
+            城市: {{city_model.name}}
+        </view>
+    </view>
+
+    <view class="task_type_box message_item">
+        <view class="task_type_desc message_desc">
+           任务类型
+        </view>
+        <view class="message_input_box">
+            <input class="task_type" model:value="{{task_type}}"></input>
+        </view>
+    </view>
+
+    <view class="task_pay_box message_item">
+        <view class="task_pay_desc message_desc">
+            任务赏金
+        </view>
+        <view class="message_input_box">
+            <input class="task_pay" model:value="{{task_pay}}"></input>
+        </view>
+    </view>
+
+    <view class="task_desc_box message_item">
+        <view class="task_desc_desc message_desc">
+            任务描述
+        </view>
+        <view class="message_input_box">
+            <input class="task_desc" model:value="{{task_desc}}"></input>
+        </view>
+    </view>
+
+    <view class="task_need_worker_nub_box message_item">
+        <view class="task_need_worker_nub_desc message_desc">
+            需要工作人数
+        </view>
+        <view class="message_input_box">
+            <input class="need_worker_nub" model:value="{{need_worker_nub}}"></input>
+        </view>
+    </view>
+
+    <view class="add_task_footer">
+        <button bindtap="save">保存</button>
+    </view>
+    </view>
+
+    <!-- 城市弹窗 -->
+    <view class="city_pop_up_box" style="display: {{isPop}}">
+        <view class="city_pop_up" >
+            <view class="city_name_att">
+                城市
+            </view>
+            <input bindinput="selectCity" class="city_name" type="text" model:value="{{city_name}}" />
+            <view class="seach_city_like_att" >
+                匹配城市列表（温馨提示：选择完1秒后自动接触弹窗，请不要返回）
+            </view>
+            <view class="seach_city_like">
+               <radio-group bindchange="sureCity">
+                   <label wx:key="{{item.id}}" wx:for="{{city_likes}}" >
+                       <radio value="{{item.id}}" bindtap="a" /> {{item.name}}
+                   </label>
+               </radio-group>
+            </view>
+        </view>
+    </view>
+
+</view>

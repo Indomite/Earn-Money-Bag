@@ -1,0 +1,28 @@
+.system_messgae {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.header {
+  
+}
+
+.title {
+  font-size: 1.125rem;
+}
+
+.title_att {
+  font-size: 0.65rem;
+  color: rgb(168, 167, 167);
+}
+
+.message_box {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  border-bottom: 2.5rpx solid #ccc;
+}
+
+.message_att {
+  margin-top: 0.25rem;
+  font-size: 0.65rem;
+}

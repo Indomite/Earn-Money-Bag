@@ -1,0 +1,108 @@
+.job_container{
+    margin: 40rpx;
+}
+
+.job_info_header{
+    padding-top: 10rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.job_title{
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.job_price{
+    font-size: 1rem;
+    font-weight: 550;
+    color: var(--themeColor);
+}
+
+.job_info_location{
+    padding: 20rpx 0;
+    border-bottom: 2rpx solid #ccc;
+}
+
+.info_location{
+    padding-left: 20rpx;
+}
+
+.headhunter{
+    display: flex;
+    border-bottom: 6rpx solid #ccc;
+}
+
+.headhunter_headImage{
+    width: 100%;
+    height: 110rpx;
+    margin: 20rpx 0;
+    flex: 1;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.headhunter_name{
+    margin-left: 40rpx;
+    flex: 5;
+    display: flex;
+    align-items: center;
+}
+
+.job_need{
+    margin-top: 10rpx;
+    padding: 20rpx 0;
+    border-bottom: 6rpx solid #ccc;
+}
+
+.job_info_title{
+    padding: 10rpx 0;
+    font-size: 0.875rem;
+    font-weight: 550;
+}
+
+.job_address{
+    margin-top: 10rpx;
+    padding: 20rpx 0;
+    border-bottom: 6rpx solid #ccc;
+}
+
+.job_address_title{
+    padding: 10rpx 0;
+    font-size: 0.875rem;
+    font-weight: 550;
+}
+
+.job_detail_tool{
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 90rpx;
+}
+
+.tool_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_share{
+    flex: 2;
+}
+
+.item_collect{
+    flex: 2;
+}
+
+.item_contart{
+    flex: 3;
+    background: pink;
+}
+
+.item_apply{
+    flex: 3;
+    background: var(--themeColor);
+}

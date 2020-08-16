@@ -1,0 +1,52 @@
+<view class="job_detail">
+
+    <view class="job_container">
+        <view class="job_info_header">
+            <view class="job_title">{{task_name}}</view>
+            <view class="job_price">{{task_pay+"/天"}}</view>
+        </view>
+        <view class="job_info_location">
+            <text class="iconfont icon-location"></text>
+            <text class="info_location">{{city_model.name}}</text>
+        </view>
+
+        <view class="job_info_time">
+            {{update_time}}
+        </view>
+
+        <view class="job_need">
+            <view class="job_info_title">
+                任务详情
+            </view>
+            <view class="job_info_detail">
+                {{task_desc}}
+            </view>
+        </view>
+
+        <view class="job_address">
+            <view class="job_address_title">
+                工作地址
+            </view>
+            <view class="job_address_detail">
+            江西省南昌市南昌县紫阳大道江西师范大学
+            </view>
+        </view>
+    </view>
+
+    <view class="job_detail_tool">
+        <view class="tool_item item_share">
+            <view class="iconfont icon-share"></view>
+            <view>
+                分享
+            </view>
+        </view>
+        <view class="tool_item item_collect ">
+            <view class="iconfont icon-shoucang"></view>
+            <view bindtap="collect">
+                收藏
+            </view>
+        </view>
+        <navigator class="tool_item item_contart" url="../message/index" bindtap="immediatlyCommunicate">立即沟通</navigator>
+        <view class="tool_item item_apply" bindtap="apply">立即申请</view>
+    </view>
+</view>

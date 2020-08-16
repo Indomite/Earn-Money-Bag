@@ -1,0 +1,52 @@
+.my_task {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .header {
+    margin-bottom: 1rem;
+  }
+  
+  .title {
+    font-size: 1.125rem;
+  }
+  
+  .title_att {
+    font-size: 0.65rem;
+    color: rgb(168, 167, 167);
+  }
+  
+  .index_list_container{
+    /* margin-bottom: 0.5rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    height: 200rpx;
+    border-bottom: 5rpx solid #ccc;
+  }
+  
+  .container_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .container_header>.list_title{
+    font-size: 1.125rem;
+  }
+  
+  .container_header>.list_price{
+    font-size: 1rem;
+    color: var(--themeColor);
+  }
+  
+  .container_content>.list_company{
+    font-size: 0.75rem;
+  }
+  
+  .container_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+  }

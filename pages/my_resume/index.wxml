@@ -1,0 +1,86 @@
+<view class="my_resume">
+    <view class="content" style="display: {{isPop == 'flex' ? 'none' : 'block'}}">
+    <view class="resume_headimage_box message_item">
+        <view class="resume_headimage_desc">
+            <view>
+                头像
+            </view>
+            <text class="" >上传真实头像被同意委托的几率更高哦</text>
+        </view>
+        <view class="resume_headimage">
+            <image class="" src="{{avatar_url}}" mode="aspectFill" bindtap="uploadAvatar"> </image>
+        </view>
+    </view>
+
+    <view class="resume_name_box message_item">
+        <view class="resume_name_desc message_desc">
+            姓名
+        </view>
+        <view class="message_input_box">
+            <input class="resume_name" model:value="{{name}}"></input>
+        </view>
+    </view>
+
+    <view class="resume_gender_box message_item">
+        <view class="resume_gender_desc message_desc">
+            性别
+        </view>
+        <view class="message_input_box">
+            <radio-group bindchange="handleChange" data-message-type="gender">
+                <radio value="1" color="var(--themeColor)" checked="{{gender == '1'}}" ></radio> 男
+                <radio value="0" color="var(--themeColor)" checked="{{gender == '0'}}" ></radio> 女
+            </radio-group>
+        </view>
+    </view>
+
+    <view class="resume_city_box message_item">
+        <view class="resume_city_desc message_desc"  bindtap="openPop">
+            城市: {{city_model.name}}
+        </view>
+    </view>
+
+    <view class="resume_phone_box message_item">
+        <view class="resume_phone_desc message_desc">
+            微信号
+        </view>
+        <view class="message_input_box">
+            <input class="resume_weixin_phone" model:value="{{weixin_phone}}"></input>
+        </view>
+    </view>
+
+    <view class="resume_task_type_box message_item">
+        <view class="resume_task_type_desc message_desc">
+            期望工作
+        </view>
+        <view class="message_input_box">
+            <input class="resume_task_type" model:value="{{expect_task_type}}"></input>
+        </view>
+    </view>
+
+    <view class="resume_footer">
+        <button bindtap="save">保存</button>
+    </view>
+    </view>
+
+    <!-- 城市弹窗 -->
+    <view class="city_pop_up_box" style="display: {{isPop}}">
+        <view class="city_pop_up" >
+            <view class="city_name_att">
+                城市
+            </view>
+            <input bindinput="selectCity" class="city_name" type="text" model:value="{{city_name}}" />
+            <view class="seach_city_like_att" >
+                匹配城市列表（温馨提示：选择完1秒后自动接触弹窗，请不要返回）
+            </view>
+            <view class="seach_city_like">
+               <radio-group bindchange="sureCity">
+                   <label wx:key="{{item.id}}" wx:for="{{city_likes}}" >
+                       <radio value="{{item.id}}" bindtap="a" /> {{item.name}}
+                   </label>
+               </radio-group>
+            </view>
+        </view>
+    </view>
+    
+
+</view>

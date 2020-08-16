@@ -1,0 +1,11 @@
+<view class="message">
+  <view class="message_box" wx:for="{{friendList}}" wx:for-item="friend">
+    <image class="friend_image" src="{{friend.frined.avatar_url}}" mode="aspectFill" lazy-load="true">
+      
+    </image>
+    <view class="friend_att" >
+      <view class="friend_name">{{friend.frined.name}}</view>
+      <view class="friend_att">一共有**向该发布人申请</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<view class="system_messgae" >
+  <view class="header">
+    <view class="title">
+      系统消息列表
+    </view>
+     <view class="title_att">
+      如果有人接收你的申请，淘金布袋2233娘会通知你哦
+    </view>
+  </view>
+
+  <view class="message_box"  wx:for="{{system_messages}}" wx:key="{{system_message.id}}" wx:for-item="system_message">
+    <view class="message_content">
+      {{system_message.content}}
+    </view>
+    <view class="message_att" style="color: {{system_message.readed == '0' ? 'red' : 'green'}}">
+      状态： {{system_message.readed == '0' ? '未读' : '已读'}}
+    </view>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+/* pages/nearly_job/index.wxss */.job_collect{
+    padding: 20rpx 30rpx;
+}
+
+.index_list_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20rpx 0;
+    height: 200rpx;
+    border-bottom: 10rpx solid #ccc;
+}
+
+.container_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_header>.list_title{
+    font-size: 1.25rem;
+}
+
+.container_header>.list_price{
+    font-size: 1rem;
+    color: var(--themeColor);
+}
+
+.container_content>.list_company{
+    font-size: 0.75rem;
+}
+
+.container_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+}

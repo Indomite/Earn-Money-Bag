@@ -1,0 +1,51 @@
+<view class="index">
+    <!-- 顶部图标 -->
+    <view class="index_banner">
+        <text class="banner_text">想找什么任务</text>
+        <searchInput></searchInput>
+    </view>
+    <!-- 主要内容 -->
+    <view class="index_main">
+        <!-- 内部导航 -->
+        <view class="index_nav">
+            <navigator class="index_nav_item" url="../nearly_job/index">
+                <view class="iconfont icon-location"></view>
+                <view>附近工作</view>
+            </navigator>
+            <navigator class="index_nav_item" url="../recently_job/index">
+                <view class="iconfont icon-shijian"></view>
+                <view>最新发布</view>
+            </navigator>
+            <navigator class="index_nav_item" url="../add_task/index">
+                <view class="iconfont icon-yaozhaoren"></view>
+                <view>我要招人</view>
+            </navigator>
+        </view>
+        <view class="index_title">
+            推荐任务
+        </view>
+        <!-- 具体任务 -->
+        <navigator
+        wx:for="{{tasks}}"
+        wx:for-item="task"
+        wx:key="task.id"
+        class="index_list_container"
+        url="{{'../job_detail/index?id=' + task.id}}"
+        >
+            <view class="container_header">
+                <view class="list_title">{{task.task_name}}</view>
+                <view class="list_price">{{task.task_pay + '/天'}}</view>
+            </view>
+            <view class="container_content">
+                <view class="list_company">{{task.task_type}}</view>
+            </view>
+            <view class="container_footer">
+                <view class="list_hunter">
+                需要人数: {{task.need_worker_nub}}
+                </view>
+                <view class="list_location">{{task.city_model.name}}</view>
+            </view>
+        </navigator>
+
+    </view>
+</view>

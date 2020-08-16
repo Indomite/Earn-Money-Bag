@@ -1,0 +1,47 @@
+<view class="user">
+    <view  class="user_login" bindtap="login">
+        <view wx:if="{{token}}" class="login_info">
+            <view class="user_name">
+                {{userInfo.name}}
+                <text class="user_att">{{userInfo.gender == '1' ? '先生' : '女士'}}</text> 
+            </view>
+        </view>
+
+        <image mode="aspectFill" class="" src="{{userInfo.avatar_url}}"/>
+        <view wx:if="{{!token}}" class="login_info">
+            <view class="user_name">
+                简历信息尚未完善
+            </view>
+            <view class="user_att">
+                点击登入寻找合适任务
+            </view>
+        </view>
+    </view>
+
+    <block wx:if="{{token}}">
+        <view  class="user_box">
+            <navigator class="box_item" url="{{'../my_resume/index?id=' + userInfo.resume_id}}" open-type="redirect">
+                <text class="">我的简历</text>
+            </navigator>
+            <navigator class="box_item" url="../my_application/index">
+                <text class="">我的申请</text>  
+            </navigator>
+            <navigator class="box_item" url="../my_task/index">
+                <text class="">我的任务</text>  
+            </navigator>
+            <navigator class="box_item" url="../my_collect/index">
+                <text class="">我的收藏</text>  
+            </navigator>
+            <navigator class="box_item" url="../add_task/index">
+                <text class="">我要发布</text>  
+            </navigator>
+             <navigator class="box_item" url="../system_message/index">
+                <text class="">系统消息</text>
+            </navigator>
+        </view>
+        <view class="login_out">
+            <button wx:if="{{token}}" bind:tap="loginOut" size="default">退出登录</button>
+        </view>
+    </block>
+    
+</view>

@@ -1,0 +1,29 @@
+<view class="my_task">
+    <view class="header">
+    <view class="title">
+      您的申请列表
+    </view>
+     <view class="title_att">
+      点击任务可查看具体的任务信息哦！
+    </view>
+  </view>
+  <!-- 具体任务 -->
+  <navigator wx:for="{{task_applications}}" wx:for-item="task_application" wx:key="task_application.id" class="index_list_container"
+    url="{{'../job_detail/index?id=' + task_application.task.id}}">
+    <view class="container_header">
+
+      
+      <view class="list_title">{{task_application.task.task_name}}</view>
+      <view class="list_price">{{task_application.task.task_pay + '/天'}}</view>
+    </view>
+    <view class="container_content">
+      <view class="list_company">{{task_application.task.task_type}}</view>
+    </view>
+    <view class="container_footer">
+      <view class="list_hunter">
+        需要人数: {{task_application.task.need_worker_nub}}
+      </view>
+      <view class="list_location">{{task_application.task.city_model.name}}</view>
+    </view>
+  </navigator>
+</view>

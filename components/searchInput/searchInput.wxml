@@ -1,0 +1,6 @@
+<view class="search_input">
+  <navigator url="/pages/search/index" open-type="navigate">
+  <view class="iconfont icon-soushuo"></view>
+  <view>搜索任务</view>
+  </navigator>
+</view>

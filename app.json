@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/add_task/index",
+    "pages/my_task/index",
+    "pages/user/index",
+    "pages/message/index",
+    "pages/job_detail/index",
+    "pages/login/index",
+    "pages/search/index",
+    "pages/my_collect/index",
+    "pages/my_resume/index",
+    "pages/my_recruit/index",
+    "pages/system_message/index",
+    "pages/my_application/index",
+    "pages/nearly_job/index",
+    "pages/recently_job/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#a3a2e9",
+    "navigationBarTitleText": "淘金布袋",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "icons/find-work.png",
+        "selectedIconPath": "icons/find-work-selected.png",
+        "text": "找工作"
+      },
+      {
+        "pagePath": "pages/message/index",
+        "iconPath": "icons/message.png",
+        "selectedIconPath": "icons/message-selected.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "icons/user.png",
+        "selectedIconPath": "icons/user-selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
