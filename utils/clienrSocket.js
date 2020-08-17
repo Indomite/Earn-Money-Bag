@@ -1,16 +1,29 @@
 const io = require('./weapp.socket.io')
-
+import {addFriend, addChatContent, receiveContent} from './chatStorage'
 let socket
 
-export const init = (user_id) => {
+export const init = (user_id, app = getApp()) => {
   socket = io('http://192.168.1.103:7777')
   socket.on('connect', function () {
     console.log('socket.io has connected')
   });
-
-  //接收消息
-  socket.on('clientPull', function (message) {
-    console.log(message)
+  //接收消息，这里会混合其它的逻辑，有空尽量解耦
+  socket.on('clientPull', function ({from, content}) {
+    const {chatRoom} = app.globalData.pageModel
+    const {friend_id} = chatRoom
+    if(chatRoom) { //如果是存在那个页面的，值得是那个也页面在显示
+      if(friend_id == from.id) { //是在和这个好友聊天
+        const data = chatRoom.data
+        const {chatContentList} = data
+        chatContentList.push({id: from.id, content})
+        this.setData({
+          chatContentList
+        })
+      }
+    }else {
+      console.log('聊天页面关闭了呢')
+    }
+    receiveContent(from, content)
   });
 
   //接收错误消息
@@ -44,7 +57,7 @@ export const socketOutLogin = ({user_id}) => {
 }
 
 //发送消息
-export const clientPush = ({from, to_id, content}) => {
+export const clientPush = ({from, to, content}) => {
   if(!socket) return false
-  socket.emit('serverPull', {from, to_id, content})
+  socket.emit('serverPull', {from, to, content})
 }

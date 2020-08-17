@@ -3,6 +3,7 @@
 }
 
 .user_login{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,4 +67,63 @@
 .user .login_out>button {
     width: 100%;
     background: var(--themeColor);
+}
+
+.pop_up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.form {
+    position: relative;
+    padding: 2rem;
+    background-color: white;
+}
+
+.title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 0 0 1rem;
+}
+
+.form>button {
+    width: 500rpx !important;
+    background: var(--themeColor);
+    color: white;
+    cursor: pointer;
+}
+
+.pop_up_close {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.pop_up_close::after, .pop_up_close::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 1.5rem;
+    height: 5rpx;
+    background-color: black;
+}
+
+.pop_up_close::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.pop_up_close::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
 }

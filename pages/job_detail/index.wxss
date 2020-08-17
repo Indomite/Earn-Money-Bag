@@ -106,3 +106,54 @@
     flex: 3;
     background: var(--themeColor);
 }
+
+
+/* 申请模块 */
+.apply{
+    margin-top: 30rpx;
+}
+
+.apply_title{
+    font-size: 0.875rem;
+    font-weight: 550;
+}
+
+.apply_header{
+    margin: 10rpx;
+    display: flex;
+    justify-content: space-around;
+}
+
+.apply_Info{
+    display: flex;
+    height: 200rpx;
+}
+
+.header_image{
+    flex: 2;
+    /* background: pink; */
+}
+
+.header_image>image{
+    width: 100rpx;
+    height: 100rpx;
+    background: pink;
+    margin: 20rpx 0 0 50rpx;
+    border-radius: 50%;
+}
+
+.user_Info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rpx;
+    flex: 5;
+}
+
+.header_Info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content{
+    margin-top: 10rpx;
+}

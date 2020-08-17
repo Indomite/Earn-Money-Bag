@@ -14,5 +14,5 @@ page{
   /* 定义主题颜色 */
   --themeColor:#a3a2e9;
   /* 统一定义字体大小 */
-  font-size: 28rpx;
+  font-size: 35rpx;
 }

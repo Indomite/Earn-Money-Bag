@@ -1,0 +1,21 @@
+<view class="application">
+    <view class="apply_header">
+        <view class="header_image">
+            <image mode="widthFix" class="" src=""/>
+        </view>
+        <view class="header_Info">
+            <view class="user_name">小明</view>
+            <view class="user_att">男</view> 
+        </view>
+    </view>
+    <view class="body_Info">
+        <view class="Info_title">就职经历</view>
+        <view class="Info_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores numquam inventore modi voluptate sed optio, velit, quos mollitia, consectetur suscipit assumenda labore aperiam similique molestias minus debitis dignissimos qui hic!</view>
+    </view>
+    <view class="footer_button">
+        <view class="contart">立即沟通</view>
+        <view class="accept">接受申请</view>
+        <view class="reject">拒绝申请</view>
+    </view>
+    
+</view>

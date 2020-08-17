@@ -33,7 +33,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.12.1",
 	"appid": "wx8922810b614c3bd7",
-	"projectname": "Fractional-job",
+	"projectname": "glod-bag",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -136,9 +136,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 10,
 					"name": "申请",
-					"pathName": "pages/my_application/index",
+					"pathName": "pages/application/index",
 					"query": "",
 					"scene": null
 				}

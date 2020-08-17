@@ -1,0 +1,19 @@
+<view class="chat_room" style="height: {{height}}">
+  <scroll-view class="message_scroll_box" scroll-y="{{true}}" scroll-into-view="a-{{bottomIndex}}" >
+  
+    <view wx:key="message.id" id="a-{{index}}" class="message_box {{message.id == myId ? 'right' : '' }}" wx:for="{{chatContentList}}" wx:for-item="message">
+      <image class="message_avatar_url" src="{{users[message.id].avatar_url}}" mode="aspectFill"></image>
+      <view class="message_att">
+        <view class="message_name">{{users[message.id].name}}</view>
+        <view class="message_content">{{message.content}}</view>
+      </view>
+    </view>
+
+  </scroll-view>
+  <view class="input_box">
+    <input 
+    confirm-type="send" bindconfirm='send'
+    bindtap="tap" bindfocus="focus" adjust-position="{{false}}" bindblur="blur" type="text" model:value="{{value}}" name="content" class="chatContent" bindinput="inPut" />
+    <view class="send {{canSend && 'can_send'}}" disabled="{{canSend}}" bindtap="send" >发送</view>
+  </view>
+</view>

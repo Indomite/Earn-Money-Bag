@@ -1,4 +1,4 @@
-// pages/my_recruit/index.js
+// pages/application/index.js
 Page({
 
   /**

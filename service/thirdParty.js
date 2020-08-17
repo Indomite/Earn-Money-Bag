@@ -22,23 +22,9 @@ export const getCode = async function() {
   })
 }
 
-//登入获取code，注意，在network时不会出现请求记录的
-export const getUserInfo = async function() {
-  return await new Promise((resolve, reject)=>{
-    wx.getUserInfo({
-      success: res => {
-        const {userInfo} = res;
-        resolve(userInfo)
-      }
-    })
-  }).catch((error)=>{
-    console.log(error)
-  })
-}
 
-
-export const getToken = function({openid, name='', city='', avatar_url='', gender=''}) {
+export const getToken = function({openid, name='', city='', avatar_url='', gender}) {
   const API = 'api/v1/users'
-  return $POST(API, {openid, name, city, avatar_url, gender})
+  return $POST(API, {openid, name, city, avatar_url, gender: gender.toString()})
 }
 

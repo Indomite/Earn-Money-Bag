@@ -1,11 +1,12 @@
 <view class="message">
-  <view class="message_box" wx:for="{{friendList}}" wx:for-item="friend">
-    <image class="friend_image" src="{{friend.frined.avatar_url}}" mode="aspectFill" lazy-load="true">
-      
+  <view class="message_box" bindtap="enterChat"  wx:for="{{friendList}}" wx:for-item="friend" data-friend-id="{{index}}">
+    <image class="friend_image" src="{{friend.friend.avatar_url}}" mode="aspectFill" lazy-load="true">
     </image>
-    <view class="friend_att" >
-      <view class="friend_name">{{friend.frined.name}}</view>
+    <view class="friend_att">
+      <view class="friend_name">{{friend.friend.name}}</view>
       <view class="friend_att">一共有**向该发布人申请</view>
     </view>
+    <image data-friend-id="{{index}}" catchtap="deleteMessage"  class="delete_message" src="./../../icons/delete.svg" mode="aspectFill">
+    </image>
   </view>
 </view>

@@ -15,12 +15,14 @@ Page({
 
   async getTaskDetail(id) {
     const { data: { task } } = await getTaskDetail(id)
-    const { issue, task_type, task_pay, task_name, task_city_id, task_desc, need_worker_nub, apply_nub, update_time, city_model } = task
+    const { issue, issue_id, task_type, task_pay, task_name, task_city_id, task_desc, need_worker_nub, apply_nub, update_time, city_model } = task
     this.setData({
       task_pay, task_name, task_city_id, task_desc, need_worker_nub, apply_nub, update_time, city_model
     })
     //绑定issue
-    this.issue = issue
+    this.issue = {
+      name: issue.name, avatar_url: issue.avatar_url, id: issue_id
+    }
   },
 
   apply() {
@@ -28,7 +30,7 @@ Page({
     const token = app.globalData.token;
     // console.log(app.globalData.token);
     const task_id = this.id;
-    // console.log(task_id);
+    console.log(task_id);
     createApplications({
       user_id, task_id, token
     });
@@ -81,7 +83,7 @@ Page({
     //发送消息
     clientPush({
       from: { id: user_id, avatar_url, name },
-      to_id: issue_id,
+      to: { id: issue_id, avatar_url: issue_avatar_url, name: issue_name },
       content
     })
     const friend_id = issue_id

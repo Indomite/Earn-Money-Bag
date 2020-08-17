@@ -1,7 +1,7 @@
 <view class="index">
     <!-- 顶部图标 -->
     <view class="index_banner">
-        <text class="banner_text">想找什么任务</text>
+        <text class="banner_text icon-a">想找什么任务</text>
         <searchInput></searchInput>
     </view>
     <!-- 主要内容 -->

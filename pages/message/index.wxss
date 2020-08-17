@@ -1,8 +1,9 @@
 .message {
-  padding: 1rem;
+  padding: 0 0.5rem;
 }
 
 .message_box {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 0.5rem;
@@ -18,4 +19,14 @@
 
 .friend_name {
   margin-bottom: 0.5rem;
+}
+
+.delete_message {
+  position: absolute;
+  /* right: 0.5rem; */
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 60rpx;
+  height: 60rpx;
 }

@@ -1,0 +1,93 @@
+.chat_room {
+  position: relative;
+  padding: 0.5rem 1rem;
+  background-color: #f3f2f279;
+  height: 100vh;
+}
+
+.message_scroll_box {
+  height: calc(100% - 3rem) ;
+}
+
+.message_box {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.message_avatar_url {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 5rpx;
+  margin-right: 0.5rem;
+}
+
+.message_att {
+  max-width: 70%;
+}
+
+.message_name {
+  margin-bottom: 0.25rem;
+  font-size: 25rpx;
+}
+
+.message_content {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  background-color: white;
+  border-radius: 10rpx;
+}
+
+
+
+.input_box {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 1rem;
+  background-color: #f3f2f2a4;
+}
+
+input {
+  flex-grow: 1;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  line-height: 2rem;
+  height: 2rem;
+  border-radius: 10rpx;
+  background-color: white;
+  padding-left: 0.5rem;
+  margin: 0.5rem 0 0.5rem;
+}
+
+.send {
+  width: 2.5rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  background-color: rgb(233, 232, 232);
+  border-radius: 10rpx;
+  margin: 0.5rem 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  color: #ccc;
+  font-size: 25rpx;
+}
+
+.can_send {
+  background-color: rgb(58, 212, 233);
+  color: white;
+}
+
+.right {
+  flex-direction: row-reverse;
+}
+
+.right .message_avatar_url {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+.right .message_name{
+  text-align: right;
+}

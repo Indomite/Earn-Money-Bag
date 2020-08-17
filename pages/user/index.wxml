@@ -1,5 +1,5 @@
 <view class="user">
-    <view  class="user_login" bindtap="login">
+    <view  class="user_login" bindtap="popUpShow">
         <view wx:if="{{token}}" class="login_info">
             <view class="user_name">
                 {{userInfo.name}}
@@ -15,6 +15,15 @@
             <view class="user_att">
                 点击登入寻找合适任务
             </view>
+        </view>
+    </view>
+
+
+    <view class="pop_up" style="display: {{popUp ? 'flex' : 'none'}}">
+        <view class="form">
+            <view class="pop_up_close" bindtap="popUpDown"></view>
+            <view class="title">快速登入</view>
+            <button open-type="getUserInfo" bindgetuserinfo="login">WECHAT LOGIN</button>
         </view>
     </view>
 

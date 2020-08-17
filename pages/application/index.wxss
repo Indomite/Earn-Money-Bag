@@ -1,0 +1,75 @@
+.application{
+    padding: 0 40rpx;
+}
+
+.apply_header{
+    display: flex;
+    height: 200rpx;
+}
+
+.header_image{
+    flex: 2;
+    /* background: pink; */
+}
+
+.header_image>image{
+    width: 120rpx;
+    height: 120rpx;
+    background: pink;
+    margin: 50rpx 0 0 50rpx;
+    border-radius: 50%;
+}
+
+.header_Info{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60rpx;
+    /* background: #000; */
+}
+
+.body_Info{
+
+}
+
+.Info_title{
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.Info_content{
+    margin-top: 20rpx;
+}
+
+.footer_button{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 90rpx;
+}
+
+.contart{
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    line-height: 90rpx;
+    background: lightblue;
+}
+
+.accept{
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    line-height: 90rpx;
+    background: var(--themeColor);
+}
+
+.reject{
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    line-height: 90rpx;
+    background: pink;
+}

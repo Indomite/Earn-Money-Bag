@@ -1,20 +1,21 @@
 {
   "pages": [
+    "pages/message/index",
     "pages/index/index",
+    "pages/chat_room/index",
     "pages/add_task/index",
     "pages/my_task/index",
     "pages/user/index",
-    "pages/message/index",
     "pages/job_detail/index",
     "pages/login/index",
     "pages/search/index",
     "pages/my_collect/index",
     "pages/my_resume/index",
-    "pages/my_recruit/index",
     "pages/system_message/index",
     "pages/my_application/index",
     "pages/nearly_job/index",
-    "pages/recently_job/index"
+    "pages/recently_job/index",
+    "pages/application/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -31,6 +31,27 @@
             江西省南昌市南昌县紫阳大道江西师范大学
             </view>
         </view>
+
+        <!-- 任务发布者模块 -->
+        <view class="apply">
+            <view class="apply_title">申请人</view>
+            <view class="apply_header">
+                <view class="waitDo">待受理</view>
+                <view class="hasDo">已受理</view>
+            </view>
+            <view class="apply_Info">
+                <view class="header_image">
+                    <image mode="widthFix" class="" src=""/>
+                </view>
+                <view class="user_Info">
+                    <view class="header_Info">
+                        <view class="user_name">小明</view>
+                        <view class="time">21:00</view> 
+                    </view>
+                    <view class="content">123456</view>
+                </view>
+            </view>
+        </view>
     </view>
 
     <view class="job_detail_tool">
